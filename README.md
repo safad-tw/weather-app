@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Features!
+  - Show weekly meal plans· 
+  - Show day meal detail for lunch and dinner
+ 
+# App Architecture
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#### React Native
+ - Used javascript(.js) and typescript(.tsx) to create class and function       component
+ - Used Apollo to query GraphQL.
+ 
+#### iOS
+Clean SWIFT (VIP) architecture has been adopted to structure the project
+Each Module Will have its own folder. eg - 
+ - DayMealListViewController 
+ - DayMealListPresenter 
+ - DayMealListInteractor 
+ - DayMealPlan 
+ - View, Service,Model, Utils etc each will have its own folder 
+ 
+# Prerequisites
 
-## Available Scripts
+- Node 12.13.1
+- iOS 11.0+  -
+- Xcode 12
+- Swift 5 
+- cocoapod 1.9.0
+- fastlane 2.149.1
 
-In the project directory, you can run:
+# Installation
+Follow these steps to setup the project 
+- Clone the repository into a new folder in your machine; 
+- git clone git@github.com:safad-tw/DietDoctor-RNMeals.git
+- Install and configure the dependencies; 
+- Open the Command Prompt and run: 
+- Run on iOS simulator
+```sh
+sh ./scripts/run_ios.sh
+ ```
+ - Run on Android emulator
+```sh
+sh ./scripts/run_android.sh
+ ```
+ - Generate adhoc build(iPA) and upload to app centre
+```sh
+sh ./scripts/ios_adhoc_ipa.sh <apple_account_email> <appcenter_token_name> <appcenter_team_name> <appcenter_app_name>
+ ```
+ eg: 
+ ```sh
+ sh ./scripts/ios_adhoc_ipa.sh "msafad90@gmail.com" "3c7da989eaeb6db984081f0753a11667f0d383d7" "Diet-doctor" "Diet-doctor-Dev"
+  ```
+  - Generate release build(iPA) and upload to testflight
+```sh
+sh ./scripts/ios_appstore_ipa.sh <apple_account_email> <api_token> <owner_name> <app_name>
+ ```
+ 
+ - Generate android apk and upload to app centre
+```sh
+sh ./scripts/android_dev_apk.sh <store_password> <alias_password> <appcenter_api_token> <appcenter_team_name> <appcenter_app_name>
+ ```
+ 
 
-### `yarn start`
+# Contact
+ - Mohammad Safad - msafad90@gmail.com
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
