@@ -1,0 +1,53 @@
+.ol-map {
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0px;
+  height: 500px;
+  width: "100%";
+}
+
+.ol-control {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.ol-full-screen {
+  top: 0.5em;
+  right: 0.5em;
+}
+.marker {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #000;
+  opacity: 0.5;
+}
+.info-box1 {
+  width: 200px !important;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #ffffff !important;
+  margin: 25px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  font-family: SFProText-Bold;
+  align-items: center;
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+}
+
+.info-box1::after {
+  content: "";
+  position: absolute;
+  left: 42%;
+  top: 70%;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #ffffff;
+  clear: both;
+}

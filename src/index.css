@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'SFProText-BoldItalic';
+    font-weight: 900;
+    src: local('SFProText-BoldItalic'), url(./fonts/SFProText-BoldItalic.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SFProText-Bold';
+  font-weight: 900;
+  src: local('SFProText-Bold'), url(./fonts/SFProText-Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SFProText-Light';
+  font-weight: 900;
+  src: local('SFProText-Light'), url(./fonts/SFProText-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SFProText-Medium';
+  font-weight: 900;
+  src: local('SFProText-Medium'), url(./fonts/SFProText-Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'SFProText-Bold';
+  font-weight: 900;
+  src: local('SFProText-Bold'), url(./fonts/SFProText-Bold.ttf) format('truetype');
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.button-round.dark {
+    background-color: #48484a;
+    border-color: #48484a;
+    color: #f2f2f2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.App {
+  background-image: linear-gradient(to right,
+      rgba(255, 0, 0, 0.52),
+      rgba(0, 195, 255, 0.73)),
+    url("img/app.jpg");
+  background-repeat: no-repeat;
+  transition: 0.2s ease;
+}
+
+.App.hot {
+  background-image: linear-gradient(to bottom,
+      rgba(255, 16, 16, 0.52),
+      rgba(0, 0, 0, 0.73)),
+    url("img/hot.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.2s ease;
+}
+
+main {
+  min-height: 100vh;
+  padding: 25px;
+}
+
+.App.cold {
+  background-image: linear-gradient(to bottom,
+      rgba(0, 255, 213, 0.52),
+      rgba(0, 0, 0, 0.73)),
+    url("img/cold.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.2s ease;
+}
+
+.search-container {
+  width: 100%;
+  margin: 0 0 75px;
+}
+
+.search-bar {
+  color: black;
+  font-size: 15px;
+  display: block;
+  width: 50%;
+  margin-top:15px;
+  padding: 15px;
+  border: none;
+  outline: none;
+  appearance: none;
+  border-radius: 15px 15px 15px 15px;
+  box-shadow: 0px 5px rgba(58, 53, 53, 0.73);
+  background: rgba(255, 255, 255, 0.52);
+  transition: 0.4s ease;
+  font-family: SFProText-Bold;
+}
+
+.search-container .search-bar:focus {
+  background-color: white;
+}
+
+.location-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.location-container {
+  color: white;
+  font-size: 30px;
+  font-family: SFProText-Bold;
+  text-align: center;
+  text-shadow: 3px 3px rgba(58, 53, 53, 0.73);
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+}
+
+.location-container .date {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-shadow: 3px 3px rgba(58, 53, 53, 0.73);
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+}
+
+.weather-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn ease 3s;
+  -webkit-animation: fadeIn ease 3s;
+}
+
+.weather-container .temperature {
+  color: white;
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  padding: 15px 25px;
+  font-size: 30px;
+  font-weight: 700;
+  background-color: rgb(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 3px 3px rgba(58, 53, 53, 0.73);
+  text-shadow: 3px 3px rgba(58, 53, 53, 0.73);
+ 
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+
+.weather-container .weather {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(58, 53, 53, 0.73);
+}
+
+#title {
+  text-align: center;
+  font-family: SFProText-Bold;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-label-container {
+  width: 100%;
+  font-family: SFProText-Bold;
+  color: white;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .search-bar {
+    width: 100%;
+  }
+}

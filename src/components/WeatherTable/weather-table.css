@@ -1,0 +1,75 @@
+@font-face {
+    font-family: 'SFProText-Bold';
+    font-weight: 900;
+    src: local('SFProText-Bold'), url(./../../fonts/SFProText-Bold.ttf) format('truetype');
+}
+
+#weather-table {
+    text-align: center;
+    font-family: SFProText-Bold;
+    border-collapse: collapse;
+    border: 3px solid #ddd;
+    width: 100%;
+  }
+  
+
+.weather-forecast-table-container {
+  margin-top: 20px;
+  font-family: SFProText-Bold;
+}
+#weather-table td,
+#weather-table th {
+  margin: 20px;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#weather-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+  animation: fadeIn ease 2s;
+  -webkit-animation: fadeIn ease 2s;
+}
+
+#weather-table tr:nth-child(odd) {
+  background: #ddd;
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+}
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+  }
+
+
+#weather-table tr:hover {
+  background-color: #ddd;
+}
+
+#weather-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+  transition: 0.2s ease;
+}

@@ -1,0 +1,12 @@
+.page-not-found-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: SFProText-Bold;
+    align-items: center;
+    justify-content: center;
+    background: #48484a;
+    font-size: 22px;
+    color: white;
+  }
