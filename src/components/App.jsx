@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from "react-redux";
 import { convertToCelcius } from "../helpers/celciusConverter";
-import "../index.css";
+import "./App.css";
 import { weatherFetchData } from "../actions/weatherFetchActions";
 import WeatherForecastTable from "./WeatherTable/WeatherForecastTable";
 

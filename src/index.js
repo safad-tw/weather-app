@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import { Route, Switch,BrowserRouter as Router } from 'react-router-dom';
 import App from './components/App';
 import WeatherMap from './components/WeatherMap';
@@ -8,7 +7,6 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from "react-redux"
 import configureStore from './store/configureStore';
 import { PageNotFound } from './PageNotFound';
-
 
 let store = configureStore();
 

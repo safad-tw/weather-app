@@ -8,13 +8,14 @@ type WeatherForecastTableProps = {
 }
 
 export default class WeatherForecastTable extends React.Component<WeatherForecastTableProps> {
-
+    
+    /* Render table header */
     renderTableHeader() {
         return this.props.headers.map((key, index) => {
             return <th key={index}>{key.toUpperCase()}</th>;
         });
     }
-
+    /* Render table rows */
     renderTableData() {
         return this.props.weather.map((weatherinfo, index) => {
             return (
@@ -33,6 +34,7 @@ export default class WeatherForecastTable extends React.Component<WeatherForecas
         });
     }
 
+     /* Render */
     render() {
             return (
                 <div className="weather-forecast-table-container">
