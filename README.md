@@ -1,64 +1,94 @@
 # Features!
-  - Show weekly meal plans· 
-  - Show day meal detail for lunch and dinner
+  - Show weather forecast data for any city
  
 # App Architecture
 
-#### React Native
- - Used javascript(.js) and typescript(.tsx) to create class and function       component
- - Used Apollo to query GraphQL.
- 
-#### iOS
-Clean SWIFT (VIP) architecture has been adopted to structure the project
-Each Module Will have its own folder. eg - 
- - DayMealListViewController 
- - DayMealListPresenter 
- - DayMealListInteractor 
- - DayMealPlan 
- - View, Service,Model, Utils etc each will have its own folder 
- 
+#### React 
+ - Used javascript(.js) and typescript(.tsx) to create class and function       components.(Best pratice to use either typescript or javascript in any project)
+ - Used Redux thunk to fetch data and store it in a state.
+ ![alt tag](https://github.com/safad-tw/weather-app/blob/main/redux.png)
+ - Used openweather api to fetch weather details.
+ - Used Open layer map to display weather info on map.
+ - Used Jest, enzyme and redux-mock-store for unit test.
+
 # Prerequisites
 
 - Node 12.13.1
-- iOS 11.0+  -
-- Xcode 12
-- Swift 5 
-- cocoapod 1.9.0
-- fastlane 2.149.1
+- Docker 9.03.13 -
+
 
 # Installation
 Follow these steps to setup the project 
 - Clone the repository into a new folder in your machine; 
-- git clone git@github.com:safad-tw/DietDoctor-RNMeals.git
-- Install and configure the dependencies; 
+- git clone git@github.com:safad-tw/weather-app.git
+- Create api key open weather api to request api.
+- For now, we will be passing api key in terminal command.(Best practise maintain a .env file for each enviornment)
+- 
 - Open the Command Prompt and run: 
-- Run on iOS simulator
+- Run it on localhost
 ```sh
-sh ./scripts/run_ios.sh
+npm install && REACT_APP_SECRET_WEATHER_API_CODE=330c81f24e4250b8183f74ad127506ac npm start
  ```
- - Run on Android emulator
+ - Run unit test
 ```sh
-sh ./scripts/run_android.sh
+npm install && npm run test
  ```
- - Generate adhoc build(iPA) and upload to app centre
+ 
+  # Docker
+ - Build using Docker
 ```sh
-sh ./scripts/ios_adhoc_ipa.sh <apple_account_email> <appcenter_token_name> <appcenter_team_name> <appcenter_app_name>
+    docker build -t weather-app:dev .
  ```
- eg: 
+ - Then, spin up the container once the build is done
+```sh
+docker run \
+    -it \
+    --rm \
+    -v ${PWD}:/app \
+    -v /app/node_modules \
+    -p 3001:3000 \
+    -e CHOKIDAR_USEPOLLING=true \
+    weather-app:dev
+ ```
+ Open your browser to http://localhost:3001/ and you should see the weather forecast app.
+ 
+Using docker compose command - Build the image and fire up the container:
  ```sh
- sh ./scripts/ios_adhoc_ipa.sh "msafad90@gmail.com" "3c7da989eaeb6db984081f0753a11667f0d383d7" "Diet-doctor" "Diet-doctor-Dev"
+ docker-compose up -d --build
   ```
-  - Generate release build(iPA) and upload to testflight
+Bring down the container
 ```sh
-sh ./scripts/ios_appstore_ipa.sh <apple_account_email> <api_token> <owner_name> <app_name>
+docker-compose stop
+ ```
+    
+# Production
+Using the production Dockerfile, build and tag the Docker image:
+```sh
+docker build -f Dockerfile.prod -t weather-app:prod .
  ```
  
- - Generate android apk and upload to app centre
-```sh
-sh ./scripts/android_dev_apk.sh <store_password> <alias_password> <appcenter_api_token> <appcenter_team_name> <appcenter_app_name>
+ Spin up the container:
+ 
+ ```sh
+docker run -it --rm -p 1337:80 weather-app:prod
  ```
  
+Navigate to http://localhost:1337/ in your browser to view the weather forecast app.
 
+
+Using docker- composer file
+ ```sh
+docker-compose -f docker-compose.prod.yml up -d --build
+ ```
+
+
+# Deployment
+
+User heroku to deploy this application.
+Navigate to https://enigmatic-caverns-20485.herokuapp.com/ in your browser to view the weather forecast app.
+
+# Github url:
+https://github.com/safad-tw/weather-app
 # Contact
  - Mohammad Safad - msafad90@gmail.com
 
