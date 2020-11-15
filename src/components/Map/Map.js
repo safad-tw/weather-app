@@ -9,6 +9,7 @@ const Map = ({ children, zoom, center, weather }) => {
   const [map, setMap] = useState(null);
 
   useEffect(() => {
+     // Added marker.
     let overlayMarker = new ol.Overlay({
       position: center,
       positioning: "center-center",
@@ -16,6 +17,7 @@ const Map = ({ children, zoom, center, weather }) => {
       stopEvent: false
     });
 
+    // Added info box to show weather details.
     let overlayInfobox = new ol.Overlay({
       position: center,
       positioning: "bottom-center",
@@ -34,7 +36,7 @@ const Map = ({ children, zoom, center, weather }) => {
     setMap(mapObject);
 
     return () => mapObject.setTarget(undefined);
-  }, []);
+  }, [center, map, zoom]);
 
   // zoom change handler
   useEffect(() => {
@@ -50,6 +52,7 @@ const Map = ({ children, zoom, center, weather }) => {
     map.getView().setCenter(center);
   }, [center]);
 
+   // Load render
   return (
     <MapContext.Provider value={{ map }}>
       <div ref={mapRef} className="ol-map">
@@ -66,10 +69,8 @@ const Map = ({ children, zoom, center, weather }) => {
             className="info-box1"
           >
             <div> {
-            `${weather.name}, ${weather.weather[0].description}.   ${Math.round(convertToCelcius(weather.main.temp))} °С`}
-
+              `${weather.name}, ${weather.weather[0].description}.   ${Math.round(convertToCelcius(weather.main.temp))} °С`}
             </div>
-           
           </div>
         )}
       </div>

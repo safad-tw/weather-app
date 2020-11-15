@@ -19,10 +19,10 @@ export function weatherFetchDataSuccess(weather) {
     };
 }
 
+/* Calls weather api and dispatches actions*/
 
 export function weatherFetchData(location) {
 
-    // console.log("api key"+ process.env.OPEN_WEATHER_APP_API_KEY)
     const API_KEY = process.env.REACT_APP_SECRET_WEATHER_API_CODE;
     const API_URL = 'http://api.openweathermap.org/data/2.5/weather?q='+ location+ '&appid=' + API_KEY;
 

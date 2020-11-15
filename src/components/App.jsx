@@ -18,7 +18,6 @@ class App extends React.PureComponent {
     this.renderWeatherData = this.renderWeatherData.bind(this);
     this.renderTableData = this.renderTableData.bind(this)
     this.renderWeatherForecast = this.renderWeatherForecast.bind(this)
-
   }
 
   componentWillReceiveProps(newProps) {

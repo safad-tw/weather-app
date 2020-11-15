@@ -8,6 +8,7 @@ import {
 
 import MapContext from "../MapContext";
 
+/* Used to load map full screen */
 const FullScreenControl = () => {
 	const {
 		map
