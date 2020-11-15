@@ -23,7 +23,7 @@ Follow these steps to setup the project
 - git clone git@github.com:safad-tw/weather-app.git
 - Create api key open weather api to request api.
 - For now, we will be passing api key in terminal command.(Best practise maintain a .env file for each enviornment)
-- 
+
 - Open the Command Prompt and run: 
 - Run it on localhost
 ```sh
@@ -84,7 +84,7 @@ docker-compose -f docker-compose.prod.yml up -d --build
 
 # Deployment
 
-User heroku to deploy this application.
+Used heroku to deploy this application.
 Navigate to https://enigmatic-caverns-20485.herokuapp.com/ in your browser to view the weather forecast app.
 
 # Github url:
