@@ -10,6 +10,7 @@
  - Used openweather api to fetch weather details.
  - Used Open layer map to display weather info on map.
  - Used Jest, enzyme and redux-mock-store for unit test.
+ - Added docker and docker compose file for production setup.
 
 # Prerequisites
 
@@ -23,7 +24,6 @@ Follow these steps to setup the project
 - git clone git@github.com:safad-tw/weather-app.git
 - Create api key open weather api to request api.
 - For now, we will be passing api key in terminal command.(Best practise maintain a .env file for each enviornment)
-
 - Open the Command Prompt and run: 
 - Run it on localhost
 ```sh
