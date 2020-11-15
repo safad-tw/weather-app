@@ -36,7 +36,7 @@ const Map = ({ children, zoom, center, weather }) => {
     setMap(mapObject);
 
     return () => mapObject.setTarget(undefined);
-  }, [center, map, zoom]);
+  }, []);
 
   // zoom change handler
   useEffect(() => {
